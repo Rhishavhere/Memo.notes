@@ -1,6 +1,8 @@
 import { cn } from "@/lib/utils";
 import GridPattern from "@/components/GridPattern";
 
+import Header from "@/components/header/Header";
+
 export default function Home() {
   return ( <>
       <GridPattern
@@ -20,9 +22,10 @@ export default function Home() {
         ]}
         className={cn(
           "[mask-image:radial-gradient(800px_circle_at_center,white,transparent)]",
-          "inset-x-0 inset-y-[-30%] h-[200%] opacity-25",
+          "inset-x-0 inset-y-[-30%] h-[200%] opacity-25 -z-50",
         )}
       />
+      <Header/>
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
     </main>
     </>
