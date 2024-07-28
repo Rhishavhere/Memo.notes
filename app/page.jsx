@@ -1,13 +1,12 @@
 'use client';
 import { motion,useScroll,useTransform } from "framer-motion";
-
+import Marquee from "react-fast-marquee";
 
 import { cn } from "@/lib/utils";
 import GridPattern from "@/components/GridPattern";
 
 
 import Header from "@/components/Header";
-import ScrollText from "@/components/ScrollText";
 
 
 export default function Home() {
@@ -36,14 +35,14 @@ export default function Home() {
         ]}
         className={cn(
           "[mask-image:radial-gradient(800px_circle_at_center,white,transparent)]",
-          "inset-x-0 inset-y-[-30%] h-[200%] opacity-50 -z-50",
+          "inset-x-0 inset-y-[-30%] h-[200%] opacity-60 -z-50",
         )}
       />
       <Header/>
 
       
 
-      <main className="flex min-h-screen flex-col items-center p-24 relative">
+      <main className="flex flex-col items-center p-32 relative mb-14">
         <p className="font-anton text-6xl m-2">
           BORED OF TAKING NOTES ?
         </p>
@@ -63,16 +62,21 @@ export default function Home() {
             Log In</button>
         </div>
 
-        <motion.div className="bg-orange-600/50 size-28 rounded-full absolute top-48 backdrop-invert z-10"
+        <motion.div className="bg-orange-600/50 size-28 rounded-full absolute top-56 backdrop-invert z-10"
         style={{right:hoverRight}}
         ></motion.div>
-        <motion.div className="bg-red-600/50 size-10 rounded-full absolute top-28 backdrop-invert z-10"
+        <motion.div className="bg-red-600/50 size-10 rounded-full absolute top-36 backdrop-invert z-10"
         style={{left:hoverLeft}}
         ></motion.div>
 
-        <ScrollText/>
+      </main>
         
-    </main>
+      <Marquee className="text-4xl font-anton overflow-hidden autoFill:true p-3 border-y">
+        <div className="mr-10">Why Memo ? </div>
+        <div className="mr-10">Because its cool & Fancy and productivity 
+          isn't your cup of tea anyways!
+        </div>
+      </Marquee>
     </>
   );
 }
