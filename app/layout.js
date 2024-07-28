@@ -1,10 +1,11 @@
 import { Inter } from "next/font/google";
+
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Script Nest",
+  title: "Memo Notes",
   description: "Your more than needed styling notes app",
 };
 

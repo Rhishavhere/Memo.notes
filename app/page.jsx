@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import GridPattern from "@/components/GridPattern";
 
-import Header from "@/components/header/Header";
+import Header from "@/components/Header";
 
 export default function Home() {
   return ( <>
@@ -26,7 +26,17 @@ export default function Home() {
         )}
       />
       <Header/>
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex min-h-screen flex-col items-center p-24">
+        <p className="font-anton text-6xl m-2">
+          BORED OF TAKING NOTES ?
+        </p>
+        <p className="font-aclonica text-8xl mt-20">
+          Introducing MEMO
+        </p>
+        <p className="font-poppins text-xl mt-5">
+          Not the notes app you need but the one <span className="font-anton"> you want !</span>
+        </p>
+        
     </main>
     </>
   );
