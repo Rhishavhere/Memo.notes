@@ -73,8 +73,8 @@ export default function Home() {
         
       <Marquee className="text-4xl font-anton overflow-hidden autoFill:true p-3 border-y">
         <div className="mr-10">Why Memo ? </div>
-        <div className="mr-10">Because its cool & Fancy and productivity 
-          isn't your cup of tea anyways!
+        <div className="mr-10">Because it&apos;s cool & Fancy and productivity 
+          isn&apos;t your cup of tea anyways!
         </div>
       </Marquee>
     </>

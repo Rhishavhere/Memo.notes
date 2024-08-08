@@ -1,10 +1,11 @@
 import Link from "next/link"
+import Image from "next/image"
 
 export default function Header(){
   return(
     <header className='flex justify-between items-center m-4 z-40'>
       <div className='flex justify-center items-center'>
-        <img className='w-8 m-3' src={'SNlogo.svg'} alt="" />
+        <Image className='m-3' src='SNlogo.svg' alt="" width={30} height={30} />
         <p className='text-white cursor-pointer'>
           Memo</p>
       </div>
@@ -17,7 +18,7 @@ export default function Header(){
           Why Script Nest</p> */}
       </nav>
       <div className='flex justify-center items-center cursor-pointer'>
-        <img className='w-8' src={'github.svg'} alt="" />
+        <Image className='w-8' src='github.svg' alt="" width={30} height={30} />
         <p className='m-3'>
           Connect Me</p>
 
