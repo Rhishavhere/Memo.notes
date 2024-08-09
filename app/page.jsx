@@ -34,8 +34,8 @@ export default function Home() {
           [15, 12],
         ]}
         className={cn(
-          "[mask-image:radial-gradient(800px_circle_at_center,white,transparent)]",
-          "inset-x-0 inset-y-[-30%] h-[200%] opacity-60 -z-50",
+          "[mask-image:radial-gradient(1500px_circle_at_center,white,transparent)]",
+          "inset-x-0 inset-y-[-30%] h-[200%] opacity-80 -z-50",
         )}
       />
       <Header/>
