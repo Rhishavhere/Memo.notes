@@ -19,6 +19,7 @@ module.exports = {
       anton:["Anton SC","sans-serif"],
       poppins:["Poppins","sans-serif"],
       aclonica:["Aclonica","sans-serif"],
+      hand:["Just Another Hand","cursive"],
     }
   },
   plugins: [],
