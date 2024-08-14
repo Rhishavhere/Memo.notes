@@ -28,14 +28,29 @@ body {
     rgb(var(--background-start-rgb));
 } */
 
-body{
+body {
   /* background: rgb(10, 8, 4); */
-  color:rgb(214, 213, 213);
+  color: rgb(214, 213, 213);
   overflow-x: hidden;
   background-color: #17161a;
   background-image: radial-gradient(circle at center, #1b1510 5%, #020101 74%);
 
 }
+
+#temp {
+  animation: load 1s infinite linear;
+}
+
+@keyframes load {
+  0% {
+    rotate: 0deg;
+  }
+
+  100% {
+    rotate: 360deg;
+  }
+}
+
 
 @layer utilities {
   .text-balance {

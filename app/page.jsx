@@ -7,16 +7,16 @@ import GridPattern from "@/components/GridPattern";
 
 import { signIn, signOut } from "next-auth/react";
 import { useSession } from "next-auth/react";
-import { redirect } from "next/navigation";
 import { useRouter } from "next/navigation";
 
 import Header from "@/components/Header";
-import Link from "next/link";
 
+import { useState } from "react";
 
 export default function Home() {
-  // const router = useRouter();
+
   const { scrollY } = useScroll();
+  const [loader, setLoader] = useState(false);
 
   const hoverRight = useTransform(scrollY, [0, 500], [390, 1500]);
   const hoverLeft = useTransform(scrollY, [0, 300], [590, 1000]);
@@ -25,6 +25,7 @@ export default function Home() {
   const router = useRouter();
 
   const sign = async () => {
+    setLoader(true);
     if (session && session.user) {
       router.push("/dashboard");
       return;
@@ -33,21 +34,23 @@ export default function Home() {
     await signIn("google", { callbackUrl: "/dashboard" });
   };
 
-  // const sign = () => {
-  //   if (session && session.user) {
-  //     console.log("i am cooking");
-  //     window.open("http://localhost:3000/dashboard");
-  //   }
-  //   else {
-  //     setTimeout(() => {
+  const loading = (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24px"
+      height="24px"
+      viewBox="0 0 24 24"
+      fill="none"
+    >
+      <path
+        d="M20.0001 12C20.0001 13.3811 19.6425 14.7386 18.9623 15.9405C18.282 17.1424 17.3022 18.1477 16.1182 18.8587C14.9341 19.5696 13.5862 19.9619 12.2056 19.9974C10.825 20.0328 9.45873 19.7103 8.23975 19.0612"
+        stroke="#ffffff"
+        strokeWidth="3.55556"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
 
-  //       signIn("google", { callbackUrl: "/dashboard" });
-
-  //     }, 1000);
-
-  //   }
-  // };
-  // const hoverSize=useTransform(scrollY,[0,500],[40,100]);
 
   return (<>
     <GridPattern
@@ -89,14 +92,14 @@ export default function Home() {
         <button className="bg-orange-600 rounded-xl p-2 pl-4 pr-4 outline-none
           hover:bg-orange-500 transition-all ease-in-out duration-300">
           Get Started</button>
-        {/* <Link href="/dashboard"> */}
+
         <button className="rounded-xl p-2 pl-4 pr-4 outline-none
            bg-white/30 hover:bg-white/50 transition ease-in-out duration-300"
           onClick={() => sign()}
         >
-          Log in
+          {loader == true ? <div id="temp">{loading}</div> : "Log In"}
         </button>
-        {/* </Link> */}
+
       </div>
 
       <motion.div className="bg-orange-600/50 size-28 rounded-full absolute top-56 backdrop-invert z-10"
