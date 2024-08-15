@@ -20,10 +20,24 @@ export default function DasboardPage({children}) {
 
 
   return (
-    <>
-      
+    <div className="flex justify-center">
+      <Nav>
+        <div>Welcome User</div>
+        <div>Your Categories</div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+      </Nav>
+      <Main>
+        {children}
+      </Main>
+      <Section>
+        <div>AI Chat</div>
+        <div>Other Tools</div>
+      </Section>
 
       <button onClick={() => signOut({ callbackUrl: "/" })}>Sign Out</button>
-    </>
+    </div>
   )
 }
