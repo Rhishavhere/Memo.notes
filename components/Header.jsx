@@ -25,7 +25,6 @@ export default function Header(){
           Connect Me</p>
 
       </div>
-      <div>click on me</div>
     </header>
   )
 }
