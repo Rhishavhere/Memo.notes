@@ -90,7 +90,9 @@ export default function Home() {
 
       <div className="flex mt-20 items-center gap-6 font-noto text-xl">
         <button className="bg-orange-600 rounded-xl p-2 pl-4 pr-4 outline-none
-          hover:bg-orange-500 transition-all ease-in-out duration-300">
+          hover:bg-orange-500 transition-all ease-in-out duration-300"
+          onClick={() => sign()}
+          >
           Get Started</button>
 
         <button className="rounded-xl p-2 pl-4 pr-4 outline-none
