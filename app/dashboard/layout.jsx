@@ -7,6 +7,7 @@ import { Data } from "../Utils/Fetch";
 import { Addtask } from "../Utils/Add";
 import { Connection } from "../Utils/checkuser";
 
+import Panel from "@/components/Panel";
 
 export default function DasboardPage({ children }) {
   const { data: session } = useSession();
@@ -20,15 +21,10 @@ export default function DasboardPage({ children }) {
 
 
   return (
-    <body className="flex justify-between bg-black">
-      <nav>
-        <div>Welcome {session?.user?.name}</div>
-        <div>Your Categories</div>
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-      </nav>
+    <body className="flex justify-between">
+      
+        <Panel></Panel>
+      
       <main>
         {children}
       </main>
