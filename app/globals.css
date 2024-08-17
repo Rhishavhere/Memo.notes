@@ -28,12 +28,18 @@ body {
     rgb(var(--background-start-rgb));
 } */
 
-body {
+#home-body {
   /* background: rgb(10, 8, 4); */
   color: rgb(214, 213, 213);
   overflow-x: hidden;
-  background-color: #17161a;
-  background-image: radial-gradient(circle at center, #1b1510 5%, #020101 74%);
+  background-image: radial-gradient(circle at center, #2c1d16 5%, #020101 74%);
+
+}
+#dashboard-body {
+  color: rgb(0, 0, 0);
+  overflow-x: hidden;
+  background-color: #eee8e5;
+  font-family:poppins;
 
 }
 
