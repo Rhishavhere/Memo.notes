@@ -29,10 +29,10 @@ body {
 } */
 
 #home-body {
-  /* background: rgb(10, 8, 4); */
+  /* background: rgb(68, 53, 21); */
   color: rgb(214, 213, 213);
   overflow-x: hidden;
-  background-image: radial-gradient(circle at center, #2c1d16 5%, #020101 74%);
+  background: radial-gradient(circle at center, #2c1d16 5%, #020101 74%);
 
 }
 #dashboard-body {
