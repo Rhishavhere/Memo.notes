@@ -24,4 +24,3 @@ export default function RootLayout({ children }) {
   );
 }
 
-// this is just to test how cloning works
