@@ -23,7 +23,7 @@ export default function DashboardPage({ session, children }) {
 
 
   return (
-    <body id="dashboard-body" className="flex justify-between">
+    <div id="dashboard-body" className="flex justify-between">
       
         <Panel></Panel>
       
@@ -34,8 +34,7 @@ export default function DashboardPage({ session, children }) {
         <div>AI Chat</div>
         <div>Other Tools</div>
         <button onClick={() => signOut({ callbackUrl: "/" })}>Sign Out</button>
-        <a href="http://localhost:3000">Home</a>
       </section>
-    </body>
+    </div>
   )
 }
