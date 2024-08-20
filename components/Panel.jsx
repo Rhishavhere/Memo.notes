@@ -1,5 +1,6 @@
 
 import { useSession } from "next-auth/react"
+import Link from "next/link";
 
 export default function Panel(){
 
@@ -20,7 +21,7 @@ export default function Panel(){
           Add To-Do</button>
           <nav className="flex flex-col items-start gap-2 ">
             <button>search</button>
-            <button>Home</button>
+            <button><Link href="/">Home</Link></button>
             <button>Notes</button>
             <button>Tasks</button>
           </nav>
