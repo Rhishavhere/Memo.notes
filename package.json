@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tiptap/pm": "^2.6.5",
+    "@tiptap/react": "^2.6.5",
+    "@tiptap/starter-kit": "^2.6.5",
     "clsx": "^2.1.1",
     "framer-motion": "^11.3.19",
     "mongoose": "^8.5.3",
