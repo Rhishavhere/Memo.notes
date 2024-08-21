@@ -10,7 +10,7 @@ export default function Panel(){
     <nav className="bg-white/30 h-[100vh] overflow-hidden">
       <section className="flex flex-col border-b-2 border-black/50 mb-4 p-5">
         <p className="text-xl">
-          Rhishav{session?.user?.name}</p>
+         {session?.user?.name}</p>
         <p className="text-sm text-slate-600">
           rhishh.me@gmail.com</p>
       </section>
