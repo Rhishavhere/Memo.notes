@@ -33,7 +33,7 @@ body {
   /* background: rgb(68, 53, 21); */
   color: rgb(255, 255, 255);
   overflow-x: hidden;
-  background: radial-gradient(circle at center, #2c1d16 5%, #020101 74%);
+  background: radial-gradient(circle at center, #111c1f 5%, #020101 74%);
 
 }
 #dashboard-body {

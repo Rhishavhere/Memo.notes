@@ -24,8 +24,8 @@ export default function DashboardPage({ session, children }) {
 
 
   return (
-    <div id="dashboard-body" className="flex justify-between">
-      <section className="flex-1">
+    <div id="dashboard-body" className="flex justify-between overflow-hidden">
+      <section className="flex-[1]">
         <Panel/>
       </section>
       
@@ -33,7 +33,7 @@ export default function DashboardPage({ session, children }) {
         {children}
       </main>
 
-      <section>
+      <section className="flex-[2]">
         <PanelOther/>
       </section>
 
