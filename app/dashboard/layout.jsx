@@ -9,6 +9,7 @@ import { signOut } from "next-auth/react";
 
 
 import Panel from "@/components/Panel";
+import PanelOther from "@/components/PanelOther";
 
 export default function DashboardPage({ session, children }) {
   
@@ -24,17 +25,18 @@ export default function DashboardPage({ session, children }) {
 
   return (
     <div id="dashboard-body" className="flex justify-between">
+      <section className="flex-1">
+        <Panel/>
+      </section>
       
-        <Panel></Panel>
-      
-      <main>
+      <main className="flex-[6]">
         {children}
       </main>
-      <section className="flex flex-col items-center">
-        <div>AI Chat</div>
-        <div>Other Tools</div>
-        <button onClick={() => signOut({ callbackUrl: "/" })}>Sign Out</button>
+
+      <section>
+        <PanelOther/>
       </section>
+
     </div>
   )
 }

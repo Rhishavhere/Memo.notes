@@ -20,6 +20,7 @@ module.exports = {
       poppins:["Poppins","sans-serif"],
       aclonica:["Aclonica","sans-serif"],
       hand:["Just Another Hand","cursive"],
+      viga:["Viga","sans-serif"]
     }
   },
   plugins: [],

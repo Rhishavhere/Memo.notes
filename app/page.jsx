@@ -18,8 +18,8 @@ export default function Home() {
   const { scrollY } = useScroll();
   const [loader, setLoader] = useState(false);
 
-  const hoverRight = useTransform(scrollY, [0, 500], [390, 1500]);
-  const hoverLeft = useTransform(scrollY, [0, 300], [590, 1000]);
+  const hoverRight = useTransform(scrollY, [0, 500], [-40, 1500]);
+  const hoverLeft = useTransform(scrollY, [0, 300], [-40, 1000]);
 
   const { data: session } = useSession();
   const router = useRouter();
@@ -77,13 +77,23 @@ export default function Home() {
 
 
 
-    <main className="flex flex-col items-center p-32 relative mb-14">
-      <p className="font-anton text-6xl m-2">
-        BORED OF TAKING NOTES ?
-      </p>
-      <p className="font-aclonica text-8xl mt-20">
-        Introducing MEMO
-      </p>
+    <main className="flex flex-col items-center p-32 mb-14">
+      <div className="relative">
+          <p className="font-viga text-6xl m-2"> 
+            BORED OF TAKING NOTES ?
+          </p>
+          <motion.div className="bg-red-600/50 size-10 rounded-full absolute top-4 backdrop-invert z-10"
+          style={{ left: hoverLeft }}
+          ></motion.div>  
+      </div>
+      <div className="relative">
+        <p className="font-aclonica text-9xl mt-20">
+          Introducing MEMO
+        </p>
+        <motion.div className="bg-orange-600/50 size-28 rounded-full absolute top-5 backdrop-invert z-10"
+            style={{ right: hoverRight }}
+        ></motion.div>
+      </div>
       <p className="font-poppins text-xl mt-5">
         Not the notes app you need but the one <span className="font-anton"> you deserve !</span>
       </p>
@@ -95,8 +105,8 @@ export default function Home() {
           >
           Get Started</button>
 
-        <button className="rounded-xl p-2 pl-4 pr-4 outline-none
-           bg-white/30 hover:bg-white/50 transition ease-in-out duration-300"
+        <button className="rounded-xl p-1 pl-4 pr-4 border-2
+           bg-white/0 hover:bg-white/30 hover:border-1 transition ease-in-out duration-300"
           onClick={() => sign()}
         >
           {loader == true ? <div id="temp">{loading}</div> : "Log In"}
@@ -104,12 +114,8 @@ export default function Home() {
 
       </div>
 
-      <motion.div className="bg-orange-600/50 size-28 rounded-full absolute top-56 backdrop-invert z-10"
-        style={{ right: hoverRight }}
-      ></motion.div>
-      <motion.div className="bg-red-600/50 size-10 rounded-full absolute top-36 backdrop-invert z-10"
-        style={{ left: hoverLeft }}
-      ></motion.div>
+      
+      
 
     </main>
 
