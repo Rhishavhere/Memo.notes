@@ -28,7 +28,7 @@ const MenuBar = () => {
           }
           // className={editor.isActive('bold') ? 'is-active' : ''}
           className='bg-slate-400 text-white p-1 pr-2 pl-2 rounded-xl'
-          
+
         >
           Bold
         </button>
@@ -221,7 +221,7 @@ const content = `
 </blockquote>
 `
 
-export default () => {
+export default function NotesPage() {
   return (
     <EditorProvider slotBefore={<MenuBar />} extensions={extensions} content={content}></EditorProvider>
   )
