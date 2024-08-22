@@ -9,7 +9,7 @@ import { signOut } from "next-auth/react";
 
 
 import Panel from "@/components/Panel";
-import PanelOther from "@/components/PanelOther";
+import Header from "@/components/dash/Header";
 
 export default function DashboardPage({ session, children }) {
   
@@ -24,6 +24,8 @@ export default function DashboardPage({ session, children }) {
 
 
   return (
+    <container >
+    <Header/>
     <div id="dashboard-body" className="flex justify-between overflow-hidden">
       <section className="flex-[1]">
         <Panel/>
@@ -33,10 +35,7 @@ export default function DashboardPage({ session, children }) {
         {children}
       </main>
 
-      <section className="flex-[2]">
-        <PanelOther/>
-      </section>
-
     </div>
+    </container>
   )
 }

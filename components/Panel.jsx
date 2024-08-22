@@ -8,10 +8,10 @@ export default function Panel() {
 
   return (
     <nav className="bg-white h-[100vh] overflow-hidden">
-      <div className="flex justify-center mt-6">
+      {/* <div className="flex justify-center mt-6">
         <p className="text-white bg-black p-2 pl-6 pr-6 rounded-xl">MEMOSPACE</p>
-      </div>
-      <section className="flex flex-col border-b-2 border-black/50 mb-2 mt-12 p-5">
+      </div> */}
+      <section className="flex flex-col border-b-2 border-black/50 mb-2 p-5">
         <p className="text-xl">
           {session?.user?.name}</p>
         <p className="text-sm text-slate-600">
