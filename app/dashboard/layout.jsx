@@ -12,7 +12,7 @@ import Panel from "@/components/Panel";
 import Header from "@/components/dash/Header";
 
 export default function DashboardPage({ session, children }) {
-  
+
   // const { data: session } = useSession();
 
   // Connection(session?.user?.name);
@@ -24,18 +24,18 @@ export default function DashboardPage({ session, children }) {
 
 
   return (
-    <container >
-    <Header/>
-    <div id="dashboard-body" className="flex justify-between overflow-hidden">
-      <section className="flex-[1]">
-        <Panel/>
-      </section>
-      
-      <main className="flex-[6]">
-        {children}
-      </main>
+    <>
+      <Header />
+      <div id="dashboard-body" className="flex justify-between overflow-hidden">
+        <section className="flex-[1]">
+          <Panel />
+        </section>
 
-    </div>
-    </container>
+        <main className="flex-[6]">
+          {children}
+        </main>
+
+      </div>
+    </>
   )
 }

@@ -79,19 +79,19 @@ export default function Home() {
 
     <main className="flex flex-col items-center p-32 mb-14">
       <div className="relative">
-          <p className="font-viga text-6xl m-2"> 
-            BORED OF TAKING NOTES ?
-          </p>
-          <motion.div className="bg-red-600/50 size-10 rounded-full absolute top-4 backdrop-invert z-10"
+        <p className="font-viga text-6xl m-2">
+          BORED OF TAKING NOTES ?
+        </p>
+        <motion.div className="bg-red-600/50 size-10 rounded-full absolute top-4 backdrop-invert z-10"
           style={{ left: hoverLeft }}
-          ></motion.div>  
+        ></motion.div>
       </div>
       <div className="relative">
         <p className="font-aclonica text-9xl mt-20">
           Introducing MEMO
         </p>
         <motion.div className="bg-orange-600/50 size-28 rounded-full absolute top-5 backdrop-invert z-10"
-            style={{ right: hoverRight }}
+          style={{ right: hoverRight }}
         ></motion.div>
       </div>
       <p className="font-poppins text-xl mt-5">
@@ -102,7 +102,7 @@ export default function Home() {
         <button className="bg-orange-600 rounded-xl p-2 pl-4 pr-4 outline-none
           hover:bg-orange-500 transition-all ease-in-out duration-300"
           onClick={() => sign()}
-          >
+        >
           Get Started</button>
 
         <button className="rounded-xl p-1 pl-4 pr-4 border-2
@@ -114,8 +114,8 @@ export default function Home() {
 
       </div>
 
-      
-      
+
+
 
     </main>
 

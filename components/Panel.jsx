@@ -15,7 +15,7 @@ export default function Panel() {
         <p className="text-xl">
           {session?.user?.name}</p>
         <p className="text-sm text-slate-600">
-          rhishh.me@gmail.com</p>
+          {session?.user?.email}</p>
       </section>
       <section className="flex flex-col p-6">
         <button className="bg-purple-600 rounded-lg mb-2 text-slate-200 p-2 pl-6 pr-6 ">
